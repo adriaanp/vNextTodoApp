@@ -6,3 +6,4 @@ obj
 *.sln.ide
 *.sln
 *.kproj
+bower_components
