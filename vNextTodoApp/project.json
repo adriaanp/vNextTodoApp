@@ -1,0 +1,16 @@
+﻿{
+    "dependencies": {
+        "Microsoft.AspNet.Server.IIS" : "1.0.0-alpha2",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-alpha2",
+        "Microsoft.AspNet.Mvc": "6.0.0-alpha2",
+        "EntityFramework.SqlServer": "7.0.0-alpha2",
+        "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-alpha2"
+    },
+    "commands": {
+        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
+    },
+    "configurations" : {
+        "net451" : { },
+        "k10" : { }
+    }
+}

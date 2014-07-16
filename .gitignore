@@ -1,0 +1,8 @@
+packages
+bin
+obj
+*.user
+*.suo
+*.sln.ide
+*.sln
+*.kproj

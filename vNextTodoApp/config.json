@@ -1,0 +1,7 @@
+﻿{
+    "Data": {
+        "DefaultConnection": {
+            "ConnectionString": "server=(localdb)\\mssqllocaldb;database=vNextTodoApp;Trusted_Connection=True;MultipleActiveResultSets=true"
+        }
+    }
+}
