@@ -14,7 +14,7 @@
         if ($scope.newTask.description === '')
             return;
 
-        $http.post('/tasks', JSON.stringify({ input: { Description: $scope.newTask.description } }))
+        $http.post('/tasks', JSON.stringify({ description: $scope.newTask.description } ))
         .then(function (data) {
             $scope.tasks.push(data.data);
         });

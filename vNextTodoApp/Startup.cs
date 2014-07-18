@@ -44,6 +44,11 @@ namespace vNextTodoApp
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name: "mvc",
+                    template: "{controller}/{action}/{id?}"
+                    );
+
+                routes.MapRoute(
                     name: "api",
                     template: "{controller}/{id?}"
                 );
