@@ -8,15 +8,22 @@
     $http.get('/tasks')
     .then(function (data) {
         $scope.tasks = data.data;
+    })
+    .catch(function (e) {
+        alert('Error: ' + e);
     });
     
     $scope.createTask = function () {
         if ($scope.newTask.description === '')
             return;
 
-        $http.post('/tasks', JSON.stringify({ description: $scope.newTask.description } ))
+        $http.post('/tasks', { description: $scope.newTask.description })
         .then(function (data) {
             $scope.tasks.push(data.data);
+            $scope.newTask.description = '';
+        })
+        .catch(function (e) {
+            alert('Could not create task: ' + e);
         });
     };
 });

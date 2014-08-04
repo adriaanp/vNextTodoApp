@@ -5,7 +5,9 @@ namespace vNextTodoApp
 {
     public class TaskInput
     {
-        [Required]
+        [Required(AllowEmptyStrings = false)]
         public string Description { get; set; }
+
+        public bool IsCompleted { get; set; }
     }
 }

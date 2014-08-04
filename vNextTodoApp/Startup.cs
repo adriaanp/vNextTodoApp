@@ -7,6 +7,8 @@ using Microsoft.AspNet.FileSystems;
 using System.IO;
 using Microsoft.Data.Entity;
 using Microsoft.Framework.ConfigurationModel;
+using Newtonsoft.Json;
+using Microsoft.AspNet.Mvc;
 
 namespace vNextTodoApp
 {
@@ -20,6 +22,9 @@ namespace vNextTodoApp
             config.AddJsonFile("config.json");
             config.AddEnvironmentVariables();
 
+            //SetupNHibernate();
+
+
             app.UseFileServer(new FileServerOptions()
             {
                 EnableDirectoryBrowsing = false,
@@ -28,7 +33,7 @@ namespace vNextTodoApp
 
             app.UseServices(services =>
             {
-                services.AddEntityFramework()
+               services.AddEntityFramework()
                 .AddSqlServer();
 
                 services.SetupOptions<DbContextOptions>(options =>
@@ -38,8 +43,23 @@ namespace vNextTodoApp
 
                 services.AddMvc();
 
+                //services.SetupOptions<MvcOptions>(options =>
+                //{
+                //    var t = options.OutputFormatters.Find(d => d.OutputFormatterType == typeof(JsonOutputFormatter));
+                //    if (t != null)
+                //    {
+                //        (t.OutputFormatter as JsonOutputFormatter).
+                //    }
+                //});
                 services.AddScoped<TaskDbContext>();
+                
+                //NHibernate
+
             });
+
+
+            //Json
+            //JsonConvert.DefaultSettings().ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
 
             app.UseMvc(routes =>
             {

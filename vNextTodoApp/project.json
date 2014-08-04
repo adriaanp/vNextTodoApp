@@ -5,7 +5,11 @@
         "Microsoft.AspNet.StaticFiles": "1.0.0-*",
         "Microsoft.AspNet.Mvc": "",
         "EntityFramework.SqlServer": "",
-        "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-*"
+        "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-*",
+        "Microsoft.Framework.DependencyInjection": "1.0.0-*",
+        "Microsoft.AspNet.Routing": "1.0.0-*",
+        "NHibernate":  "3.3.3.4001",
+        "FluentNHibernate":  "1.4.0"
     },
     "commands": {
         "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
