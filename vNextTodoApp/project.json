@@ -1,21 +1,21 @@
 ﻿{
     "dependencies": {
-        "Microsoft.AspNet.Server.IIS" : "1.0.0-*",
-        "Microsoft.AspNet.Server.WebListener": "1.0.0-*",
-        "Microsoft.AspNet.StaticFiles": "1.0.0-*",
-        "Microsoft.AspNet.Mvc": "",
-        "EntityFramework.SqlServer": "",
-        "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-*",
-        "Microsoft.Framework.DependencyInjection": "1.0.0-*",
-        "Microsoft.AspNet.Routing": "1.0.0-*",
-        "NHibernate":  "3.3.3.4001",
-        "FluentNHibernate":  "1.4.0"
+        "Microsoft.AspNet.Server.IIS": "1.0.0-alpha3",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-alpha3",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-alpha3",
+        "Microsoft.AspNet.Mvc": "6.0.0-alpha3",
+        "EntityFramework.SqlServer": "7.0.0-alpha3",
+        "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-alpha3",
+        "Microsoft.Framework.DependencyInjection": "1.0.0-alpha3",
+        "Microsoft.AspNet.Routing": "1.0.0-alpha3",
+        "NHibernate": "3.3.3.4001",
+        "FluentNHibernate": "1.4.0"
     },
     "commands": {
         "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
     },
     "frameworks" : {
-        "net451" : { },
-        "k10" : { }
+        "net451": { },
+        "k10": { }
     }
 }
